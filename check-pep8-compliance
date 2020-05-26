@@ -1,0 +1,6 @@
+# for windows
+
+py -3 -m pip install pytest
+py -3 -m pip install pytest-pep8
+
+py.test --pep8 vsearch.py
