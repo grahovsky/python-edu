@@ -34,6 +34,7 @@ def log_request(req: 'flask_request', res: str) -> None:
                           req.remote_addr,
                           req.user_agent.browser,
                           res))
+        # raise
 
 
 @app.route('/search4', methods=['POST'])
