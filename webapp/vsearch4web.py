@@ -1,6 +1,7 @@
 from flask import Flask, render_template, request, escape, session
 from vsearch import search4letters
-from DBcm import UseDatabase
+
+from DBcm import UseDatabase, ConnectionError
 from checker import check_logged_in
 
 # print(__name__)
