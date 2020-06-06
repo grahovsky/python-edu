@@ -1,14 +1,16 @@
 from flask import Flask, render_template, request, escape, session
+from flask import copy_current_request_context
+
 from vsearch import search4letters
 
-from DBcm import UseDatabase, ConnectionError
+from DBcm import UseDatabase, ConnectionError, CredentialsError, SQLError
 from checker import check_logged_in
 
 # print(__name__)
 app = Flask(__name__)
 
 app.config['dbconfig'] = { 'host': '127.0.0.1',
-                           'user': 'vsearch',
+                           'user': 'vsearch1',
                            'password': 'vsearchpasswd',
                            'database': 'vsearchlogDB'}
 
